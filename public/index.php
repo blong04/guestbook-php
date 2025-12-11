@@ -25,7 +25,7 @@ $messages = $stmt->fetchAll();
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Guestbook đơn giản</title>
+    <title>Guestbook đơn giản v2</title>
     <style>
         body { font-family: sans-serif; max-width: 700px; margin: 40px auto; }
         form { margin-bottom: 30px; }
