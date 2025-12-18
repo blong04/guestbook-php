@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   web:
     build: .
@@ -9,10 +11,17 @@ services:
 
   db:
     image: mysql:8
+    container_name: guestbook-db
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpass
-      MYSQL_DATABASE: guestbook_db
-      MYSQL_USER: guest
-      MYSQL_PASSWORD: guestpass
+      MYSQL_DATABASE: if0_40653409_guestbook_db
+      MYSQL_USER: if0_40653409
+      MYSQL_PASSWORD: FV4SEsh1nhz
     ports:
       - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

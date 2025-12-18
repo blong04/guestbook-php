@@ -1,9 +1,9 @@
 <?php
-$host = 'sql302.infinityfree.com';
-$db   = 'if0_40653409_guestbook_db';
-$user = 'if0_40653409';
-$pass = 'FV4SEsh1nhz'; // nếu có mật khẩu thì điền ở đây
-$charset = 'utf8mb4';
+if (getenv('DOCKER_ENV')) {
+    require __DIR__ . '/config-docker.php';
+} else {
+    require __DIR__ . '/config-prod.php';
+}
 
 $dsn = "mysql:host=$host;port=3306;dbname=$db;charset=$charset";
 
