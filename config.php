@@ -5,7 +5,7 @@ $user = 'if0_40653409';
 $pass = 'FV4SEsh1nhz'; // nếu có mật khẩu thì điền ở đây
 $charset = 'utf8mb4';
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$dsn = "mysql:host=$host;port=3306;dbname=$db;charset=$charset";
 
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
